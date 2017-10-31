@@ -1,0 +1,44 @@
+<div class="card-panel blue-grey lighten-5">
+                    <div class="header">
+                        <span><%= post.user.name %></span>
+                        <span><%= post.created_at %></span>
+                        <h2 class="pre-line"><%= post.content %></h2>
+                    </div>
+
+                    <div class="card-action">
+                      <div class="like-align">
+                        <p class="pre-line">관심<%= post.likes.size %>명</p>
+                      </div>
+                        <% if current_user.is_Like?(post) %>
+                            <i class="material-icons">favorite_border<%= link_to "dislike", post_like_path(post), method: "post" %></i>
+                        <% else %>
+                            <i class="material-icons">favorite<%= link_to "like", post_like_path(post), method: "post" %></i>
+                        <% end %>
+                        <% if current_user.id == post.user_id %>
+                            <%= link_to "delete", post_path(post), method: "delete", class: "left" %>
+                            <%= link_to "edit", edit_post_path(post), class: "left" %>
+                        <% end %>
+                        <!--<%= form_tag post_comments_path(post) do %>-->
+                        <!--  <div class="input-field col s9 inline">-->
+                        <!--    <%= text_area_tag :content, nil, class: "materialize-textarea", required: true %>-->
+                        <!--  </div>-->
+                        <!--  <div class="input-field inline">-->
+                        <!--    <%= button_tag "댓글", class: "btn-flat" %>-->
+                        <!--  </div>-->
+                        <!--<% end %>-->
+                        <!--<% if post.comments.present? %>-->
+                        <!--  <ul class="collection">-->
+                        <!--  <% post.comments.each do |comment| %>-->
+                        <!--    <li class="collection-item">-->
+                        <!--      <span class="title"><%= comment.user.name %></span>-->
+                        <!--      <span class="right"><%= comment.created_at %></span>-->
+                        <!--      <p class="pre-line"><%= comment.content %></p>-->
+                        <!--      <% if comment.user.id == current_user.id %>-->
+                        <!--        <div><%= link_to "삭제", post_comment_path(post, comment), method: "delete" %></div>-->
+                        <!--      <% end %>-->
+                        <!--    </li>-->
+                        <!--  <% end %>-->
+                        <!--  </ul>-->
+                        <!--<% end %>-->
+                    </div>
+                     </div>

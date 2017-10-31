@@ -1,14 +1,272 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Openfeminism</title>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--style-->
+  <style>
+              /*html 에 style태그로 일단 넣어놓고 html 완료되면 css 파일에 추가.*/
+      		.logohome{
+      		    margin-top: 10%;
+      		}
+      		
+      		.left-box {
+               position: fixed;
+               width: 50%;
+               overflow: scroll;
+               margin-left: 2%;
+               margin-right: 4%;
+               text-align: center;
+            }
+             
+            .right-box {
+               margin-left: 10%;
+               text-align: center;
+            }
+            
+            .right-new {
+               margin-left: 5%;
+               text-align: center;
+            }
+            
+            /*.workshop_main{*/
+            /*    margin-left: 10%;*/
+            /*}*/
+                
+            .usermenu {
+                    text-align: right;
+                    margin-right: 4%;
+            }
+            
+            .cardlist {
+                    margin-left: -8%;
+                    margin-right: 4%;
+                    text-align: left;
+            }
+            
+            .like-align {
+                    text-align: right;
+                    margin-right: -10%;
+            }
+            
+            .likepos{
+      		    text-align: right;
+      		}
+            
+            body {
+      				margin: 0 auto;
+      				text-align: left;
+      			}
+
+  			header {
+                  width:64%;
+  				margin-top:0;
+  				padding-top:0;
+  			}
+  			header p {
+  				font-size:0.76em;line-height:1.5em;padding:0.65em 0;
+  			}
+  			header h1 {
+  				font-size:0.9em; line-height:1.4em;
+  			}
+  			
+  			#thumbnail {
+                 margin-left: -20%;
+                 width: 100%;
+                 height: 100%;
+  			}
+  			
+  			#description {
+                text-align: center;
+  			}
+  			
+  			#header {
+  				width: 75%;
+  				padding:20px;
+                  position:fixed;
+                  z-index:99990;
+                  /*background-color:rgba(255,255,255,0.85);*/
+  			}
+  			#header .inner {
+                  width:64%;
+  			}
+              .symbol {
+                  margin-left:-0.8em;
+                  position:relative;
+                  z-index: 99999;
+              }
+  			#main {
+  				width: 100%;
+  			}
+  			p {
+  				font-size: 0.76em;
+  				width: 80%;
+  				margin: 0 auto;
+  				padding-bottom: 30px;
+  			}
+  			#main p {
+  				width: 80%;
+  				margin: 0 auto;
+  				padding-bottom: 10px;
+  			}
+  			#footer {
+                  width: 100%;
+  				margin: 0 auto;
+                  padding:0;
+  				bottom: 0;
+  				height:100px;
+  				text-align: center;
+                  z-index:99998;
+                  background:none;
+  			}
+  			#footer_section{
+  				text-align: center;
+  				margin: 0 auto;
+  				padding: 50px 0;
+  			}
+  			#footer h2 {
+  				text-align: center;
+  				margin:0 0 20px;
+  				font-size:1.3rem;
+  			}
+  		</style>
 </head>
 <body>
+<!--leftpage-->
+<div class="row">
+<div class="col s6">
+		<!-- Wrapper -->
+		<div class="left-box">
+			<div id="wrapper">
+					
+<div id="logohome">
+    <a href="/"><%= image_tag("ofLogo_1.png") %></a>
+</div>
+<!--오픈페미니즘 안내-->
+<h2>THE MORE WE CONNECTED,</br>THE STRONGER WE ARE.</h2>
+<p>오픈 페미니즘은 국민대학교 조형대학에 기반한 페미니즘 연구 동아리입니다. 저희는 2016년 9월에 발족하였으며, 현재는 약 60명 정도 되는 구성원들과 함께 합니다. 오픈 페미니즘의 모든 구성원들은 디자인을 전공하는 학부생으로, 페미니즘 이슈에 관심을 가진다는 공통점을 지니고 있습니다.</p>
+<!--게시판 안내-->
+<h2>TEACH GIRLS BRAVERY,</br>NOT PERFECTION.</h2>
+<p>오픈 페미니즘의 활동은 <a href="https://www.ted.com/talks/reshma_saujani_teach_girls_bravery_not_perfection?language=ko">르쉬마 사자니(Reshma Saujani)의 강연</a>에서 영감을 받았습니다. 우리는 완벽한 결과물을 내는데 집중하기보다, 페미니즘적인 관점에서 지금껏 시도되지 않았던 다양한 활동들에 도전해보고자 합니다.
+<strong>오른쪽 Ideas 페이지에는 댓글을 통해 오픈 페미니즘이 다루었으면 하는 활동을 제안할수 있습니다.</strong> 제안의 형식은 자유입니다. 어떤 생각이라도 환영합니다. 여러분이 주신 아이디어를 밑거름 삼아 오픈 페미니즘의 활동은 계속됩니다.</p>
+<!--오픈소스-->
+<h2>OPEN SOURCES</h2>
+<p>저희 구성원들이 페미니즘적 관점에서 제작한 컨텐츠들은 누구나 참고, 이용할수 있도록 오픈 소스로서 제공됩니다.</p>
+						<ul>
+							<li><a href="/d">공간키트(space kit)</li>
+							<li><a href="/d2">웰컴키트(Welcome Kit)</a></li>
+							<li><a href="/d3">조형전 워크샵(Exhibition)</a></li>
+							<li><a href="/d4">시각디자인학과 워크샵(Workshop)</a></li>
+						</ul>
+				
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section id="footer_section" style="margin:0 auto!important">
+								<!--<h2>contact us</h2>-->
+								<ul class="icons">
+									<li><a href="mailto:openfeminismkmuvcd@gmail.com"><i class="material-icons">mail_outline</i></a></li>
+									<li><a href="https://www.facebook.com/openfeminism/"><i class="material-icons">face</i></a></li>
+									<li><a href="https://twitter.com/openfeminismkmu"><i class="material-icons">textsms</i></a></li>
+									<!--<li><a href="https://github.com/openfeminism" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>-->
+								</ul>
+							</section>
+							<!--<ul class="copyright" style="margin:30px;">
+								<li>&copy; Open Feminism. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>-->
+						</div>
+					</footer>
 
-<%= yield %>
+			</div>
 
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+            <script>
+            //window height
+                function heightChange(){
+                    var wHeight = $(window).height();
+                    $('#wrapper').css({'height':wHeight+'px'});
+                }
+                window.onload = heightChange;
+                window.onresize = heightChange;
+                
+            //slide
+                var idx = 0;
+                var slidemax = 3;
+                var width = 25;
+
+                function sliding(add) {
+                    idx = idx + add;
+                    if(idx < 0) idx = slidemax;
+                    else if(idx > slidemax) idx = 0;
+                    $('.slides').stop().animate({'left' : -(idx*width)+"%"}, "slow");
+                }
+
+                autoslide = setInterval(function() { sliding(1) }, 4000);
+
+                function after() {
+                    setTimeout(function() {
+                        clearInterval(autoslide);  
+                        autoslide = setInterval(function() { sliding(1) }, 4000);
+                    }, 2000);
+                }
+
+                $('#leftbtn, #rightbtn').click(function() {
+                    clearInterval(autoslide);  
+                    if($(this).attr('id') == "leftbtn") sliding(-1);
+                    else sliding(1);
+                    after();
+                });
+                
+                $('.slides').hover(function() {
+                    clearInterval(autoslide);  
+                    after();
+                });
+
+            </script>
+</div>
+</div>
+
+<!--rightpage-->
+<div class="col s6">
+    <div class="right-box">
+    <!--<nav>-->
+      <!--<div class="nav-wrapper">-->
+      <section>
+      <div class="usermenu">
+        <!--<a href="/" class="brand-logo">Ideas</a>-->
+        <!--<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>-->
+        <!--<ul class="right hide-on-med-and-down">-->
+        <ul class="actions">
+          <!--<li><a href="#">opensource</a></li>-->
+          <% if user_signed_in? %>
+          <li><%= current_user.name %></li>
+          <li><%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %></li>
+          <% else %>
+          <li><a href="/users/sign_in">log in</a></li>
+          <li><a href="/users/sign_up">sign up</a></li>
+          <% end %>
+        </ul>
+        <!--<ul class="side-nav" id="mobile-demo">-->
+        <!--  <li><a href="#">opensource</a></li>-->
+          <!--<li><a href="badges.html">Components</a></li>-->
+          <!--<li><a href="collapsible.html">Javascript</a></li>-->
+          <!--<li><a href="mobile.html">Mobile</a></li>-->
+        <!--</ul>-->
+      </div>
+      </section>
+    <!--</nav>-->
+  <%= yield %>
+</div>
+</div>
+</div>
 </body>
 </html>

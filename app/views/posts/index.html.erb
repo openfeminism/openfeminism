@@ -1,0 +1,54 @@
+<!--rightpage-->
+<div class="right-new">
+<!--<h2>Ideas</h2>-->
+<!--<div class="container">-->
+  <div class="row">
+    <div class="input-field col s12">
+      <div class="card-content">
+        <!--<%= image_tag("blank.png") %>-->
+        <h2>IDEAS</h2>
+        <%= form_tag posts_path do %>
+          <!--<div class="input-field">-->
+          <!--    <%= file_field_tag :image %>-->
+          <!--</div>-->
+          <div class="input-field">
+            <%= text_area_tag :content, nil, class: "materialize-textarea" %>
+          </div>
+
+          <div class="input-field">
+            <%= button_tag "write", class: "btn-flat" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!--</div>-->
+<div class="right-box">
+<!--<div class="container">-->
+    <div class="row">
+     <div class="cardlist">
+        <div class="col s12 m12">
+        <!--    <div class="card">-->
+        <!--        <div class="card-image">-->
+        <!--            <img src="http://materializecss.com/images/office.jpg" />-->
+        <!--        </div>-->
+        <!--        <div class="card-content">-->
+        <!--            <div class="card-title"><%= current_user.name %></div>-->
+        <!--            <p>이메일 : <%= current_user.email %></p>-->
+        <!--            <p>올린 글 개수 : <%= @posts_count %></p>-->
+        <!--            <%= link_to new_post_path do %>-->
+        <!--                <button class="btn">글 쓰기</button>-->
+        <!--            <% end %>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</div>-->
+        <div>
+            <% @posts.each do |post| %>
+                <%= render partial: "post", object: post %>
+            <% end %>
+        </div>
+    </div>
+</div>
+</div>
+</div>
